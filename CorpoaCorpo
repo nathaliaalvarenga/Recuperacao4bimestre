@@ -1,0 +1,15 @@
+
+public class CorpoaCorpo extends Arma{
+	
+
+	public CorpoaCorpo (String nome, int danoMax, int durabilidade) {
+		return;
+	}
+	 public int atacar() {
+		return 0;
+	}
+	 public boolean apenasumaMao(){
+		return true;
+	 }
+	 }
+
