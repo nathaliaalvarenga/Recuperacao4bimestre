@@ -1,0 +1,30 @@
+
+public abstract class Arma extends Item{
+  
+ private int danoMax;
+
+
+public Arma(String nome,int danoMax,int durabilidade){
+		return;
+ }
+ 
+ public int atacar(int valor, int durabilidade) {
+	valor(0 >= danoMax);
+	return valor;
+	if(durabilidade= 0){
+		return 0;
+	}
+}
+ 
+
+
+private void valor(boolean b) {
+	// TODO Auto-generated method stub
+	
+}
+
+
+public boolean apenasumaMao(){
+	return false;
+ }
+
