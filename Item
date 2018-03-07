@@ -1,0 +1,9 @@
+
+public abstract class Item extends Personagem {
+	 String nome;
+	
+	private String examinar(){
+		return nome != null "+" : maxHp "+" : HPAtual;
+	
+	}
+}
