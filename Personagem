@@ -1,50 +1,53 @@
 public class Personagem {
-	String nome;
- 	int maxHp;
- 	int Hpatual;
- 
- 
- private Personagem(String nome, int maxHP){
-		 
+    private String nome;
+    private int HPMax;
+    private int HPAtual;
+    private boolean equiparE;
+    private boolean equiparD;
+    ArrayList<Pocao> inventario ;
+    ArrayList<Arma> armas ;
+    
+public Personagem(String nome, int HPmax){
+this.nome = nome;
+this.HPMax = HPmax;
 }
- 
- public void equiparArma (Arma a) {
-	 if (nome ="maos livres" != null){
-		 apenasumaMao();
-		 System.out.print(a);
-		 
-		
-	if (nome ="uma mao livres"){
-			 apenasumaMao();
-			 System.out.print(a);
-	}
-	}
- }
- private void apenasumaMao() {
-	// TODO Auto-generated method stub
-	
+public void equiparArma(Arma a){
+    boolean arm = a.usaApenasUmaMao();
+if(equiparD == false && arm == false){
+    this.equiparD = true;
+    this.equiparE = true;
+    this.armas.add(a);}
+    
+else if(equiparD == false && arm){
+    this.equiparD = true;
+    this.armas.add(a);
 }
-
-public void addPorcao (Pocao p){
-	 return;
- }
- 
- 
- public void recuperarVida(){
- 
- 
- }
-public void sofrerDano(int dano)
-	try {
-		dano= maxHp - Hpatual;
-	 return;
-	 public class PersonagemFalecidoException extends Exception {
-			} catch (PersonagemFalecidoException e) {
-			System.out.println(e.getMessage("Personagem faleceu. Tente voltar ao último save ;)"));
-		}
-	}
-String Status(){
-	return ("Nome Personagem" + nome + "Hpatual" + Hpatual +
-    "Hp maximo do personagem"+ maxHp);
+else if(equiparD && equiparE == false && arm ){
+    this.equiparE = true;
+    this.armas.add(a);
+}}
+public void addPocao(Pocao a){
+this.inventario.add(a);
 }
+public void SofrerDano(int dano){
+this.HPAtual = this.HPAtual - dano;
+try{
+    if(this.HPAtual <= 0){
+throw new PersonagemFacelido();}
+}
+catch(PersonagemFacelido ex){
+    System.out.print("Personagem Faleceu. tente voltar ao ultimo save :)");
+}}
+public String status(){
+String Personagem = this.nome + String.valueOf(this.HPMax)+ String.valueOf(this.HPAtual);
+String Armas= "";
+String pocao = "";
+for(Arma a : this.armas){
+     Armas = Armas + a.examinar();
+}
+for(Pocao a : this.inventario){
+     pocao = pocao + a.examinar();
+}
+String dado = Personagem + Armas + pocao;
+        return dado;
 }
