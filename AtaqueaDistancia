@@ -1,0 +1,15 @@
+
+public class AtaqueaDistancia extends Arma{
+
+	
+public void AtaqueaDistacia (String nome, int danoMax, int durabilidade) {
+	return;
+}
+ public int atacar() {
+	return 0;
+}
+
+public boolean apenasumaMao(){
+	return false;
+}
+}
