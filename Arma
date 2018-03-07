@@ -1,30 +1,24 @@
 
-public abstract class Arma extends Item{
-  
- private int danoMax;
-
-
-public Arma(String nome,int danoMax,int durabilidade){
-		return;
- }
- 
- public int atacar(int valor, int durabilidade) {
-	valor(0 >= danoMax);
-	return valor;
-	if(durabilidade= 0){
-		return 0;
-	}
-}
- 
-
-
-private void valor(boolean b) {
-	// TODO Auto-generated method stub
-	
-}
-
-
-public boolean apenasumaMao(){
-	return false;
- }
-
+public abstract class Arma extends Item {
+    private int danoMAX;
+    private int durabilidade;
+    public Arma(String nome,int danoMAX, int durabilidade){
+    this.nome = nome;
+    this.danoMAX = danoMAX;
+    this.durabilidade = durabilidade;
+    }
+        @Override
+    public String examinar(){
+    String dado = this.nome + String.valueOf(this.danoMAX) + String.valueOf(this.durabilidade);
+    return dado;}
+public int atacar(){
+    if(durabilidade == 0){
+    return 0;}
+    else {
+    this.durabilidade = this.durabilidade - 1;
+    Random rd = new Random();
+    int dano = rd.nextInt(this.danoMAX);
+    return dano;
+    }}
+public abstract boolean usaApenasUmaMao();
+        }
