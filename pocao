@@ -1,0 +1,20 @@
+
+public class Pocao extends Item {
+	int HpRestaurado;
+	private String nome;
+	
+
+
+	public Pocao(String nome,int Hprestaurado){
+		
+	 }
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	 
+}
