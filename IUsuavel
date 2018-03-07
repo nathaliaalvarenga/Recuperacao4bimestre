@@ -1,0 +1,7 @@
+
+public interface IUsavel {
+
+	public default void usar(){
+		return HPRestaurado;
+	}
+}
